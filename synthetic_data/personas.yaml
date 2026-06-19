@@ -1,0 +1,295 @@
+# Synthetic Personas for Tax Filing Assistant
+# Used as test fixtures across Phase 3 (extraction), Phase 5 (reasoning), and Phase 6 (eval)
+# Ground truth tax calculations go in synthetic_data/ground_truth/ (Phase 6)
+
+personas:
+
+  - id: P1
+    name: "Amit Sharma"
+    age: 26
+    city: "Pune"
+    metro: false
+    pan: "ABCPS1234A"
+    employer: "Infosys Limited"
+    employer_tan: "PNEI12345A"
+    assessment_year: "2026-27"
+    financial_year: "2025-26"
+    salary:
+      gross_annual: 600000
+      basic_annual: 360000
+      hra_annual: 120000
+      special_allowance_annual: 120000
+      tds_deducted: 8000
+    rent_paid_monthly: 0
+    investments:
+      section_80C: 0
+      lic_premium: 0
+      ppf: 0
+      elss: 0
+    health_insurance:
+      self_premium: 0
+      parents_premium: 0
+      parents_senior_citizen: false
+    expected_regime: "new"
+    notes: "Young employee, zero investments, clear new regime winner"
+
+  - id: P2
+    name: "Priya Nair"
+    age: 31
+    city: "Bangalore"
+    metro: false
+    pan: "BCDPN5678B"
+    employer: "Wipro Technologies"
+    employer_tan: "BLRW67890B"
+    assessment_year: "2026-27"
+    financial_year: "2025-26"
+    salary:
+      gross_annual: 850000
+      basic_annual: 425000
+      hra_annual: 170000
+      special_allowance_annual: 255000
+      tds_deducted: 45000
+    rent_paid_monthly: 0
+    investments:
+      section_80C: 80000
+      lic_premium: 30000
+      ppf: 50000
+      elss: 0
+    health_insurance:
+      self_premium: 12000
+      parents_premium: 0
+      parents_senior_citizen: false
+    expected_regime: "new"
+    notes: "Partial 80C, self 80D only, no HRA — new regime still wins"
+
+  - id: P3
+    name: "Rahul Mehta"
+    age: 35
+    city: "Mumbai"
+    metro: true
+    pan: "CDERМ9012C"
+    employer: "HDFC Bank Limited"
+    employer_tan: "MUMH90123C"
+    assessment_year: "2026-27"
+    financial_year: "2025-26"
+    salary:
+      gross_annual: 1000000
+      basic_annual: 500000
+      hra_annual: 250000
+      special_allowance_annual: 250000
+      tds_deducted: 85000
+    rent_paid_monthly: 22000
+    investments:
+      section_80C: 150000
+      lic_premium: 50000
+      ppf: 50000
+      elss: 50000
+    health_insurance:
+      self_premium: 18000
+      parents_premium: 0
+      parents_senior_citizen: false
+    expected_regime: "old"
+    notes: "Full 80C, metro HRA, self 80D — old regime wins"
+
+  - id: P4
+    name: "Sneha Iyer"
+    age: 38
+    city: "Delhi"
+    metro: true
+    pan: "DEFSI3456D"
+    employer: "Tata Consultancy Services"
+    employer_tan: "DELT34567D"
+    assessment_year: "2026-27"
+    financial_year: "2025-26"
+    salary:
+      gross_annual: 1200000
+      basic_annual: 600000
+      hra_annual: 300000
+      special_allowance_annual: 300000
+      tds_deducted: 130000
+    rent_paid_monthly: 28000
+    investments:
+      section_80C: 150000
+      lic_premium: 50000
+      ppf: 50000
+      elss: 50000
+    health_insurance:
+      self_premium: 20000
+      parents_premium: 20000
+      parents_senior_citizen: false
+    expected_regime: "old"
+    notes: "Full 80C, metro HRA, self + parents 80D — old regime wins"
+
+  - id: P5
+    name: "Vikram Reddy"
+    age: 42
+    city: "Chennai"
+    metro: true
+    pan: "EFGVR7890E"
+    employer: "Larsen and Toubro"
+    employer_tan: "CHEL78901E"
+    assessment_year: "2026-27"
+    financial_year: "2025-26"
+    salary:
+      gross_annual: 1500000
+      basic_annual: 750000
+      hra_annual: 300000
+      special_allowance_annual: 450000
+      tds_deducted: 210000
+    rent_paid_monthly: 32000
+    investments:
+      section_80C: 150000
+      lic_premium: 60000
+      ppf: 50000
+      elss: 40000
+    health_insurance:
+      self_premium: 22000
+      parents_premium: 45000
+      parents_senior_citizen: true
+    expected_regime: "old"
+    notes: "Full 80C, metro HRA, senior citizen parents 80D — old regime wins"
+
+  - id: P6
+    name: "Ananya Singh"
+    age: 40
+    city: "Hyderabad"
+    metro: false
+    pan: "FGHAS2345F"
+    employer: "Cognizant Technology Solutions"
+    employer_tan: "HYDC23456F"
+    assessment_year: "2026-27"
+    financial_year: "2025-26"
+    salary:
+      gross_annual: 1800000
+      basic_annual: 900000
+      hra_annual: 360000
+      special_allowance_annual: 540000
+      tds_deducted: 310000
+    rent_paid_monthly: 0
+    investments:
+      section_80C: 150000
+      lic_premium: 50000
+      ppf: 50000
+      elss: 50000
+    health_insurance:
+      self_premium: 20000
+      parents_premium: 25000
+      parents_senior_citizen: false
+    expected_regime: "old"
+    notes: "Full 80C, non-metro no HRA, self + parents 80D — old regime wins"
+
+  - id: P7
+    name: "Rohan Gupta"
+    age: 45
+    city: "Mumbai"
+    metro: true
+    pan: "GHIRG6789G"
+    employer: "Reliance Industries Limited"
+    employer_tan: "MUMR67890G"
+    assessment_year: "2026-27"
+    financial_year: "2025-26"
+    salary:
+      gross_annual: 2500000
+      basic_annual: 1250000
+      hra_annual: 500000
+      special_allowance_annual: 750000
+      tds_deducted: 550000
+    rent_paid_monthly: 50000
+    investments:
+      section_80C: 150000
+      lic_premium: 60000
+      ppf: 50000
+      elss: 40000
+    health_insurance:
+      self_premium: 25000
+      parents_premium: 50000
+      parents_senior_citizen: true
+    expected_regime: "old"
+    notes: "High income, full 80C, metro HRA, senior citizen parents — old regime wins"
+
+  - id: P8
+    name: "Kavya Menon"
+    age: 29
+    city: "Pune"
+    metro: false
+    pan: "HIJKM4567H"
+    employer: "Accenture Solutions"
+    employer_tan: "PNEA45678H"
+    assessment_year: "2026-27"
+    financial_year: "2025-26"
+    salary:
+      gross_annual: 900000
+      basic_annual: 450000
+      hra_annual: 180000
+      special_allowance_annual: 270000
+      tds_deducted: 55000
+    rent_paid_monthly: 0
+    investments:
+      section_80C: 0
+      lic_premium: 0
+      ppf: 0
+      elss: 0
+    health_insurance:
+      self_premium: 0
+      parents_premium: 0
+      parents_senior_citizen: false
+    expected_regime: "new"
+    notes: "Borderline salary, zero investments — new regime barely wins, tests edge case"
+
+  - id: P9
+    name: "Arjun Kapoor"
+    age: 50
+    city: "Mumbai"
+    metro: true
+    pan: "IJLAK8901I"
+    employer: "JP Morgan Chase"
+    employer_tan: "MUMJ89012I"
+    assessment_year: "2026-27"
+    financial_year: "2025-26"
+    salary:
+      gross_annual: 5000000
+      basic_annual: 2500000
+      hra_annual: 1000000
+      special_allowance_annual: 1500000
+      tds_deducted: 1450000
+    rent_paid_monthly: 80000
+    investments:
+      section_80C: 150000
+      lic_premium: 60000
+      ppf: 50000
+      elss: 40000
+    health_insurance:
+      self_premium: 25000
+      parents_premium: 50000
+      parents_senior_citizen: true
+    expected_regime: "old"
+    notes: "Very high income, surcharge territory — surcharge rate difference between regimes matters here"
+
+  - id: P10
+    name: "Deepa Krishnan"
+    age: 33
+    city: "Kolkata"
+    metro: true
+    pan: "JKMDK2345J"
+    employer: "ITC Limited"
+    employer_tan: "CALI23456J"
+    assessment_year: "2026-27"
+    financial_year: "2025-26"
+    salary:
+      gross_annual: 700000
+      basic_annual: 350000
+      hra_annual: 140000
+      special_allowance_annual: 210000
+      tds_deducted: 18000
+    rent_paid_monthly: 14000
+    investments:
+      section_80C: 150000
+      lic_premium: 50000
+      ppf: 50000
+      elss: 50000
+    health_insurance:
+      self_premium: 12000
+      parents_premium: 0
+      parents_senior_citizen: false
+    expected_regime: "borderline"
+    notes: "Full 80C on low salary + metro HRA — tests whether deductions actually flip regime decision"
