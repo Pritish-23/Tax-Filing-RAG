@@ -1,0 +1,38 @@
+# Web scraping
+requests
+beautifulsoup4
+
+# LangChain
+langchain
+langchain-community
+langchain-huggingface
+
+# Embeddings
+sentence-transformers
+
+# Vector store
+chromadb
+
+# Data validation
+pydantic
+
+# Config
+pyyaml
+
+# PDF parsing (Phase 3)
+pdfplumber
+pymupdf
+
+# API layer (Phase 8)
+fastapi
+uvicorn
+
+# UI (Phase 8)
+streamlit
+
+# Monitoring (Phase 7)
+langsmith
+
+# Testing / Eval (Phase 6)
+ragas
+pytest

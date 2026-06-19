@@ -1,0 +1,171 @@
+# Tax Constants - Versioned by Assessment Year
+# This file holds ALL numeric values used in regime comparison math.
+# The reasoning engine (Phase 5) reads from here exclusively.
+# Never derive these numbers from LLM interpretation of embedded text.
+
+assessment_years:
+
+  "2025-26":
+    financial_year: "2024-25"
+    description: "AY 2025-26 constants - old and new regime"
+
+    standard_deduction:
+      old_regime: 50000
+      new_regime: 50000
+
+    old_regime:
+      slabs:
+        - { upto: 250000,  rate: 0.00 }
+        - { upto: 500000,  rate: 0.05 }
+        - { upto: 1000000, rate: 0.20 }
+        - { upto: null,    rate: 0.30 }
+      rebate_87A:
+        max_income: 500000
+        max_rebate: 12500
+      surcharge:
+        - { above: 5000000,  rate: 0.10 }
+        - { above: 10000000, rate: 0.15 }
+        - { above: 20000000, rate: 0.25 }
+        - { above: 50000000, rate: 0.37 }
+      health_education_cess: 0.04
+
+    new_regime:
+      default: true
+      slabs:
+        - { upto: 300000,  rate: 0.00 }
+        - { upto: 600000,  rate: 0.05 }
+        - { upto: 900000,  rate: 0.10 }
+        - { upto: 1200000, rate: 0.15 }
+        - { upto: 1500000, rate: 0.20 }
+        - { upto: null,    rate: 0.30 }
+      rebate_87A:
+        max_income: 700000
+        max_rebate: 25000
+      surcharge:
+        - { above: 5000000,  rate: 0.10 }
+        - { above: 10000000, rate: 0.15 }
+        - { above: 20000000, rate: 0.25 }
+        - { above: 50000000, rate: 0.25 }
+      health_education_cess: 0.04
+      deductions_not_allowed:
+        - "80C"
+        - "80D"
+        - "HRA"
+        - "80TTA"
+        - "80TTB"
+
+    deduction_limits:
+      section_80C:
+        max_limit: 150000
+        instruments:
+          - "LIC Premium"
+          - "PPF"
+          - "ELSS"
+          - "EPF (employee contribution)"
+          - "NSC"
+          - "5-year tax saver FD"
+          - "Tuition fees (up to 2 children)"
+          - "Principal repayment on home loan"
+      section_80D:
+        self_spouse_children:
+          limit: 25000
+          senior_citizen_limit: 50000
+        parents:
+          limit: 25000
+          senior_citizen_limit: 50000
+        max_combined: 100000
+        preventive_health_checkup:
+          limit: 5000
+          within_overall_limit: true
+      hra:
+        metro_cities:
+          - "Mumbai"
+          - "Delhi"
+          - "Kolkata"
+          - "Chennai"
+        metro_salary_percent: 0.50
+        non_metro_salary_percent: 0.40
+        rent_threshold_for_pan: 100000
+
+  "2026-27":
+    financial_year: "2025-26"
+    description: "AY 2026-27 constants - Budget 2025 revised new regime slabs"
+
+    standard_deduction:
+      old_regime: 50000
+      new_regime: 75000
+
+    old_regime:
+      slabs:
+        - { upto: 250000,  rate: 0.00 }
+        - { upto: 500000,  rate: 0.05 }
+        - { upto: 1000000, rate: 0.20 }
+        - { upto: null,    rate: 0.30 }
+      rebate_87A:
+        max_income: 500000
+        max_rebate: 12500
+      surcharge:
+        - { above: 5000000,  rate: 0.10 }
+        - { above: 10000000, rate: 0.15 }
+        - { above: 20000000, rate: 0.25 }
+        - { above: 50000000, rate: 0.37 }
+      health_education_cess: 0.04
+
+    new_regime:
+      default: true
+      slabs:
+        - { upto: 400000,  rate: 0.00 }
+        - { upto: 800000,  rate: 0.05 }
+        - { upto: 1200000, rate: 0.10 }
+        - { upto: 1600000, rate: 0.15 }
+        - { upto: 2000000, rate: 0.20 }
+        - { upto: 2400000, rate: 0.25 }
+        - { upto: null,    rate: 0.30 }
+      rebate_87A:
+        max_income: 1200000
+        max_rebate: 60000
+      surcharge:
+        - { above: 5000000,  rate: 0.10 }
+        - { above: 10000000, rate: 0.15 }
+        - { above: 20000000, rate: 0.25 }
+        - { above: 50000000, rate: 0.25 }
+      health_education_cess: 0.04
+      deductions_not_allowed:
+        - "80C"
+        - "80D"
+        - "HRA"
+        - "80TTA"
+        - "80TTB"
+
+    deduction_limits:
+      section_80C:
+        max_limit: 150000
+        instruments:
+          - "LIC Premium"
+          - "PPF"
+          - "ELSS"
+          - "EPF (employee contribution)"
+          - "NSC"
+          - "5-year tax saver FD"
+          - "Tuition fees (up to 2 children)"
+          - "Principal repayment on home loan"
+      section_80D:
+        self_spouse_children:
+          limit: 25000
+          senior_citizen_limit: 50000
+        parents:
+          limit: 25000
+          senior_citizen_limit: 50000
+        max_combined: 100000
+        preventive_health_checkup:
+          limit: 5000
+          within_overall_limit: true
+      hra:
+        metro_cities:
+          - "Mumbai"
+          - "Delhi"
+          - "Kolkata"
+          - "Chennai"
+        metro_salary_percent: 0.50
+        non_metro_salary_percent: 0.40
+        rent_threshold_for_pan: 100000
