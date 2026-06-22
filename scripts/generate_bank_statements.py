@@ -116,14 +116,16 @@ def generate_investment_transactions(p: dict, rng: random.Random) -> list[dict]:
 
     # ── ELSS SIP (monthly) ───────────────────────────────────────────────────
     if inv.get("elss", 0) > 0:
-        monthly_sip = inv["elss"] // 12
-        months      = list(range(4, 13)) + list(range(1, 4))
-        for month in months:
-            year = 2025 if month >= 4 else 2026
+        monthly_sip   = inv["elss"] // 12
+        last_month_sip = inv["elss"] - (monthly_sip * 11)  # absorbs the rounding remainder
+        months        = list(range(4, 13)) + list(range(1, 4))
+        for i, month in enumerate(months):
+            year   = 2025 if month >= 4 else 2026
+            amount = last_month_sip if i == len(months) - 1 else monthly_sip
             transactions.append({
                 "date":        format_date(date(year, month, rng.randint(1, 10))),
                 "description": f"SIP DEBIT - AXIS ELSS FUND - {date(year, month, 1).strftime('%b-%Y').upper()}",
-                "debit":       monthly_sip,
+                "debit":       amount,
                 "credit":      "",
                 "balance":     None,
                 "category":    "INVESTMENT",
