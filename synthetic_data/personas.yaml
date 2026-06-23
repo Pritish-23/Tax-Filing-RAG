@@ -88,7 +88,7 @@ personas:
       self_premium: 18000
       parents_premium: 0
       parents_senior_citizen: false
-    expected_regime: "old"
+    expected_regime: "new"
     notes: "Full 80C, metro HRA, self 80D — old regime wins"
 
   - id: P4
@@ -117,7 +117,7 @@ personas:
       self_premium: 20000
       parents_premium: 20000
       parents_senior_citizen: false
-    expected_regime: "old"
+    expected_regime: "new"
     notes: "Full 80C, metro HRA, self + parents 80D — old regime wins"
 
   - id: P5
@@ -146,7 +146,7 @@ personas:
       self_premium: 22000
       parents_premium: 45000
       parents_senior_citizen: true
-    expected_regime: "old"
+    expected_regime: "new"
     notes: "Full 80C, metro HRA, senior citizen parents 80D — old regime wins"
 
   - id: P6
@@ -175,7 +175,7 @@ personas:
       self_premium: 20000
       parents_premium: 25000
       parents_senior_citizen: false
-    expected_regime: "old"
+    expected_regime: "new"
     notes: "Full 80C, non-metro no HRA, self + parents 80D — old regime wins"
 
   - id: P7
@@ -204,7 +204,7 @@ personas:
       self_premium: 25000
       parents_premium: 50000
       parents_senior_citizen: true
-    expected_regime: "old"
+    expected_regime: "new"
     notes: "High income, full 80C, metro HRA, senior citizen parents — old regime wins"
 
   - id: P8

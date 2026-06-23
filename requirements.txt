@@ -36,3 +36,6 @@ langsmith
 # Testing / Eval (Phase 6)
 ragas
 pytest
+
+python-dotenv
+anthropic
