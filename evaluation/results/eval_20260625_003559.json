@@ -1,0 +1,256 @@
+{
+  "summary": {
+    "run_timestamp": "2026-06-25T00:35:59.312080",
+    "extraction_accuracy": 1.0,
+    "regime_accuracy": 1.0,
+    "avg_faithfulness": 0.806,
+    "avg_relevance": 0.766,
+    "overall_score": 0.893,
+    "total_personas": 10,
+    "total_rag_pairs": 11
+  },
+  "extraction": [
+    {
+      "persona_id": "P1",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P2",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P3",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P4",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P5",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P6",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P7",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P8",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P9",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P10",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    }
+  ],
+  "regime": [
+    {
+      "persona_id": "P1",
+      "expected": "new",
+      "got": "new",
+      "matched": true,
+      "old_tax": 23400,
+      "new_tax": 0,
+      "savings": 23400
+    },
+    {
+      "persona_id": "P2",
+      "expected": "new",
+      "got": "new",
+      "matched": true,
+      "old_tax": 56264,
+      "new_tax": 0,
+      "savings": 56264
+    },
+    {
+      "persona_id": "P3",
+      "expected": "new",
+      "got": "new",
+      "matched": true,
+      "old_tax": 27144,
+      "new_tax": 0,
+      "savings": 27144
+    },
+    {
+      "persona_id": "P4",
+      "expected": "new",
+      "got": "new",
+      "matched": true,
+      "old_tax": 51272,
+      "new_tax": 0,
+      "savings": 51272
+    },
+    {
+      "persona_id": "P5",
+      "expected": "new",
+      "got": "new",
+      "matched": true,
+      "old_tax": 103064,
+      "new_tax": 97500,
+      "savings": 5564
+    },
+    {
+      "persona_id": "P6",
+      "expected": "new",
+      "got": "new",
+      "matched": true,
+      "old_tax": 290160,
+      "new_tax": 150800,
+      "savings": 139360
+    },
+    {
+      "persona_id": "P7",
+      "expected": "new",
+      "got": "new",
+      "matched": true,
+      "old_tax": 351000,
+      "new_tax": 319800,
+      "savings": 31200
+    },
+    {
+      "persona_id": "P8",
+      "expected": "new",
+      "got": "new",
+      "matched": true,
+      "old_tax": 85800,
+      "new_tax": 0,
+      "savings": 85800
+    },
+    {
+      "persona_id": "P9",
+      "expected": "old",
+      "got": "old",
+      "matched": true,
+      "old_tax": 1057680,
+      "new_tax": 1099800,
+      "savings": 42120
+    },
+    {
+      "persona_id": "P10",
+      "expected": "borderline",
+      "got": "borderline",
+      "matched": true,
+      "old_tax": 0,
+      "new_tax": 0,
+      "savings": 0
+    }
+  ],
+  "rag": [
+    {
+      "persona_id": "P1",
+      "question": "What is my net taxable income?",
+      "expected": "Your net taxable income is Rs. 5,25,000. This is calculated as gross salary Rs. 6,00,000 minus standard deduction of Rs. 75,000.",
+      "actual": "# Your Net Taxable Income for AY 2026-27\n\nBased on your financial data, your **net taxable income is Rs. 525,000** under the new tax regime.\n\n## How This Was Calculated\n\nStarting with your gross salary of Rs. 600,000:\n- **Less: Standard Deduction** (new regime): Rs. 75,000\n- **Net Taxable Income**: Rs. 525,000\n\n## Important Note About Your HRA\n\nYou received Rs. 120,000 as HRA but claimed Rs. 0 as HRA exemption. This means the full HRA amount remains in your taxable income. Since you didn't provide rent paid details, no HRA exemption could be claimed. **If you paid rent, you may be eligible to reduce this amount** \u2014 I'd recommend consulting a CA to review this.\n\n## What This Means for Your Tax\n\nThe good news: Under the **new regime**, your tax liability is **zero** (Rs. 0) because of the rebate available to salaried individuals, even though your taxable income is Rs. 525,000.\n\nUnder the old regime, you would have owed Rs. 23,400 in tax, so **switching to the new regime saves you Rs. 23,400**.\n\n---\n\n*This analysis applies to Assessment Year 2026-27 and is based on the pre-computed figures provided. For clarification on your HRA exemption and other complex aspects, please consult a Chartered Accountant.*",
+      "faithfulness": 1.0,
+      "relevance": 1.0
+    },
+    {
+      "persona_id": "P1",
+      "question": "Should I choose old or new tax regime?",
+      "expected": "You should choose the new tax regime. Your taxable income under the new regime is Rs. 5,25,000 which is below Rs. 12,00,000, so you get full rebate under Section 87A and pay zero tax. Under the old regime you would pay Rs. 23,400.",
+      "actual": "# Tax Regime Recommendation for AY 2026-27\n\nBased on your financial data, **the New Tax Regime is clearly better for you** \u2014 you'll save **Rs. 23,400** in taxes!\n\n## Here's Why:\n\n**Your Current Situation:**\n- Your gross salary is Rs. 6,00,000\n- You have **no investments in 80C** (LIC, PPF, ELSS, etc.)\n- You have **no health insurance premiums** to claim under 80D\n- You received HRA but paid **no rent**, so you can't claim HRA exemption\n\n**The Math (simplified):**\n\n| Aspect | Old Regime | New Regime |\n|--------|-----------|-----------|\n| **Taxable Income** | Rs. 5,50,000 | Rs. 5,25,000 |\n| **Total Tax** | Rs. 23,400 | **Rs. 0** |\n\nIn the New Regime, your income falls well within the **rebate limit of Rs. 12 lakhs**, so you pay **zero tax**. The Old Regime would cost you Rs. 23,400.\n\n## Important Notes:\n\n\u2705 You're not missing out on deductions because you haven't made any qualifying investments anyway.\n\n\u26a0\ufe0f **Going Forward:** If you plan to invest in 80C (LIC, PPF, ELSS) or buy health insurance in the future, reassess your regime choice each year \u2014 Old Regime may become better if your deductions increase significantly.\n\n\ud83d\udd04 **Good News:** You can switch regimes every year when filing your return, so you're not locked in.\n\n---\n\n*This analysis applies to Assessment Year 2026-27. For complex situations, please consult a Chartered Accountant.*",
+      "faithfulness": 0.67,
+      "relevance": 0.33
+    },
+    {
+      "persona_id": "P2",
+      "question": "Can I claim deduction for my PPF deposit?",
+      "expected": "Yes, your PPF deposit of Rs. 50,000 is eligible for deduction under Section 80C. Combined with your LIC premium of Rs. 30,000, your total 80C investment is Rs. 80,000 which is within the Rs. 1,50,000 limit. You still have Rs. 70,000 of unused 80C capacity.",
+      "actual": "# Yes, You Can Claim PPF Deduction! \u2705\n\nGreat news! Based on your financial data for **Assessment Year 2026-27**, you **can definitely claim a deduction for your PPF deposit of Rs. 50,000** under **Section 80C**.\n\n## Your Current Situation:\n\n- **PPF Deposit Made:** Rs. 50,000\n- **Other 80C Investments:** LIC Premium of Rs. 30,000\n- **Total 80C Claimed:** Rs. 80,000\n- **80C Limit:** Rs. 1,50,000\n- **Unused 80C Capacity:** Rs. 70,000 (You have room for more investments!)\n\n## What You Need to Do:\n\n1. **Gather proof:** Have your PPF deposit slip or bank statement showing the transfer ready\n2. **Report in ITR:** Declare this Rs. 50,000 PPF investment under \"Deductions under Chapter VI-A\" (Section 80C) when filing your income tax return\n3. **No additional action needed:** Since you've already claimed Rs. 80,000 in 80C on your Form 16 (which includes this PPF), you're all set\n\n## Important Note:\n\nHowever, I should mention that based on the **pre-computed tax analysis provided**, the **New Regime is significantly more beneficial for you**, saving **Rs. 56,264 in taxes**. In the New Regime, you cannot claim 80C deductions at all, but your tax liability becomes zero due to the standard deduction and tax slabs available.\n\n**For complex decisions like this, I'd recommend consulting a CA** to determine the best strategy for your long-term financial planning.",
+      "faithfulness": 0.92,
+      "relevance": 1.0
+    },
+    {
+      "persona_id": "P2",
+      "question": "What is my 80D deduction for health insurance?",
+      "expected": "You can claim Rs. 12,000 under Section 80D for your self health insurance premium. The limit for self and family is Rs. 25,000 so you are well within the limit. You have not paid any parents health insurance premium so total 80D deduction is Rs. 12,000.",
+      "actual": "# Your Section 80D Deduction (AY 2026-27)\n\nBased on your financial data, **your eligible Section 80D deduction is Rs. 12,000**.\n\nThis comes from:\n- **Self health insurance premium:** Rs. 12,000 \u2713\n\n## Why Only Rs. 12,000?\n\nYou've claimed only the self-health insurance premium. Under Section 80D, you can claim up to **Rs. 25,000** for yourself, spouse, and dependent children combined. This means you still have **Rs. 13,000 of unused 80D capacity** available.\n\n### Additional Deduction Opportunities:\n- **Spouse health insurance:** You could add premiums for your spouse (up to the combined Rs. 25,000 limit)\n- **Preventive health checkups:** Up to Rs. 5,000 for preventive checkups are included within the Rs. 25,000 limit\n\n**Important note:** Parents' health insurance premiums are **not eligible** under Section 80D for dependents \u2014 only spouse and dependent children qualify.\n\n---\n\n## Impact on Your Tax:\n\nGood news! According to the pre-computed analysis, **the New Regime is better for you and saves Rs. 56,264 in total tax**, even with your current 80D claim. So while maximizing Section 80D is generally beneficial in the old regime, it won't change your recommendation this year.\n\n**For complex situations involving family members, I'd recommend consulting a Chartered Accountant to ensure you're claiming all eligible deductions correctly.**",
+      "faithfulness": 1.0,
+      "relevance": 0.75
+    },
+    {
+      "persona_id": "P3",
+      "question": "How is my HRA exemption calculated?",
+      "expected": "Your HRA exemption is Rs. 2,64,000 calculated using Rule 2A as the minimum of: HRA received Rs. 2,50,000, 50% of basic salary Rs. 2,50,000 (metro city Mumbai), and rent paid Rs. 2,64,000 minus 10% of basic Rs. 50,000 = Rs. 2,14,000. Wait - the minimum of these three is Rs. 2,14,000.",
+      "actual": "# Your HRA Exemption Calculation (AY 2026-27)\n\nGreat question! Let me walk you through how your HRA exemption of **Rs. 189,000** was calculated.\n\n## The Three-Part Test\n\nHRA exemption is the **lowest of these three amounts**:\n\n1. **Actual HRA received**: Rs. 250,000\n2. **50% of Basic Salary** (Metro city): Rs. 750,000 \u00d7 50% = **Rs. 375,000**\n3. **Rent paid minus 10% of Basic Salary**: Rs. 264,000 \u2212 (Rs. 750,000 \u00d7 10%) = Rs. 264,000 \u2212 Rs. 75,000 = **Rs. 189,000**\n\n## Your Result\n\nThe **lowest amount is Rs. 189,000**, so that's your HRA exemption.\n\nThis means:\n- **HRA you can claim tax-free**: Rs. 189,000\n- **HRA that becomes taxable**: Rs. 250,000 \u2212 Rs. 189,000 = Rs. 61,000\n\n## Why This Matters\n\nYour rent paid (Rs. 264,000) was the limiting factor here. Even though your employer gave you Rs. 250,000 as HRA and you work in a metro city (eligible for 50% exemption), the actual rent you paid determined the maximum exemption available.\n\n---\n\n**Note**: This applies to the **Old Tax Regime** only. The New Regime doesn't allow HRA deductions, but based on your income, the pre-computed analysis recommends the New Regime for better tax savings.\n\nFor any specific concerns about your rent documentation or landlord details (required under 2026 rules), I'd recommend consulting a CA.",
+      "faithfulness": 0.79,
+      "relevance": 1.0
+    },
+    {
+      "persona_id": "P3",
+      "question": "I have invested Rs 1.5 lakh in 80C. Can I claim the full amount?",
+      "expected": "Yes, you can claim the full Rs. 1,50,000 under Section 80C. Your investments include LIC premium Rs. 50,000, PPF deposit Rs. 50,000, and ELSS investment Rs. 50,000 totalling Rs. 1,50,000 which exactly matches the maximum limit. There is no unused 80C capacity.",
+      "actual": "# Your Section 80C Claim \u2013 Assessment Year 2026-27\n\nBased on your financial data, **you can claim the full Rs. 1.5 lakh under Section 80C**, and in fact, you've already done so optimally.\n\n## Here's Your Breakdown:\n\nYour investments total exactly Rs. 1.5 lakh:\n- **LIC Premium:** Rs. 50,000\n- **PPF Deposit:** Rs. 50,000\n- **ELSS Investment:** Rs. 50,000\n- **Total:** Rs. 1.5 lakh \u2713\n\nSince the **maximum Section 80C deduction limit for FY 2025-26 is Rs. 1.5 lakh**, your entire investment amount qualifies, and you have **zero unused capacity** under this section.\n\n## Important Note:\n\nYour employer has already claimed the full Rs. 1.5 lakh deduction in your Form 16, which is correct. Make sure you have the supporting documents (investment certificates, receipts) available when filing your ITR to substantiate these claims.\n\n---\n\n## A Word on Your Overall Tax Situation:\n\nInterestingly, the pre-computed analysis shows the **New Regime is more beneficial for you this year**, saving Rs. 32,344 compared to the Old Regime. In the New Regime, these Section 80C deductions won't apply, but your tax liability is significantly lower anyway due to lower slab rates.\n\n**I recommend consulting a Chartered Accountant** before finalizing your regime choice, especially if your situation might change next year.",
+      "faithfulness": 0.7,
+      "relevance": 0.83
+    },
+    {
+      "persona_id": "P5",
+      "question": "What is the 80D limit for my senior citizen parents?",
+      "expected": "Since your parents are senior citizens, the 80D deduction limit for parents is Rs. 50,000 instead of the standard Rs. 25,000. You have paid Rs. 45,000 as parents health insurance premium which is within this limit. Your total 80D deduction is Rs. 67,000 (Rs. 22,000 for self plus Rs. 45,000 for parents).",
+      "actual": "# Section 80D Limit for Senior Citizen Parents\n\nBased on the tax law and your specific situation for **AY 2026-27**:\n\n**Your parents (senior citizens) can claim a deduction of up to Rs. 50,000** under Section 80D for health insurance premiums paid on their behalf.\n\n## Your Current Status:\nGood news! You're well within the limit:\n- **Parents' health insurance premium paid:** Rs. 45,000\n- **80D limit for senior citizen parents:** Rs. 50,000\n- **Your position:** Rs. 5,000 of unused capacity\n\nThis means all Rs. 45,000 of your parents' insurance premiums are eligible for deduction, which is already reflected in your tax calculation as part of your total Rs. 67,000 Section 80D claim.\n\n---\n\n**Note:** The Rs. 50,000 limit for senior citizen parents is separate from the Rs. 25,000 limit available for self, spouse, and children. You're currently claiming both within the allowed limits.\n\nFor any complex situations regarding coverage eligibility, I'd recommend consulting with a CA. \ud83d\ude0a",
+      "faithfulness": 0.82,
+      "relevance": 0.8
+    },
+    {
+      "persona_id": "P5",
+      "question": "Which regime saves me more tax?",
+      "expected": "The new tax regime saves you Rs. 13,052. Under the old regime your total tax is Rs. 1,10,552 and under the new regime it is Rs. 97,500. Even though you have significant deductions of Rs. 5,31,000 under the old regime, the new regime's lower slab rates result in lower overall tax.",
+      "actual": "# Tax Regime Recommendation for AY 2026-27\n\n**The New Tax Regime saves you more tax by \u20b913,052.**\n\n## Here's why:\n\nEven though you've claimed substantial deductions totaling **\u20b9531,000** under the old regime (including \u20b9150,000 under Section 80C, \u20b967,000 under Section 80D, and \u20b9264,000 HRA exemption), the **new regime's relaxed tax slabs are more beneficial** for your income level.\n\n### Quick Comparison:\n\n| Aspect | Old Regime | New Regime |\n|--------|-----------|-----------|\n| **Taxable Income** | \u20b9969,000 | \u20b91,425,000 |\n| **Total Tax** | \u20b9110,552 | \u20b997,500 |\n| **Effective Rate** | 7.37% | 6.5% |\n\n**Your tax savings with New Regime: \u20b913,052**\n\n## Key Takeaway:\n\nYour deductions are well-optimized (you've maximized your 80C and 80D limits, and claimed good HRA exemption), but they're still **not substantial enough** to make the old regime more beneficial at your income level of \u20b91.5 lakhs. The new regime's lower tax rates work in your favor here.\n\n---\n\n\u26a0\ufe0f **Please consult a Chartered Accountant** before finalizing your tax filing to ensure all deductions are correctly claimed and to review your specific circumstances.",
+      "faithfulness": 0.89,
+      "relevance": 0.75
+    },
+    {
+      "persona_id": "P9",
+      "question": "Why does old regime save me more tax despite lower deductions in new regime?",
+      "expected": "At your income level of Rs. 50,00,000 the surcharge rate matters significantly. Under the old regime with your deductions the effective surcharge is lower, whereas the new regime applies a 25% surcharge on your base tax at this income level. Combined with your significant deductions of over Rs. 5,00,000 under the old regime, the old regime saves you Rs. 42,120.",
+      "actual": "Great question! Let me clarify this for you.\n\nActually, the **new regime is slightly better for you** \u2014 it saves you **Rs. 4,680** compared to the old regime (AY 2026-27). So it's the opposite of what you're asking, but let me explain why this might seem counterintuitive.\n\n## Why New Regime Wins Despite Old Regime Having Deductions\n\nYou're right to notice that the old regime has significant deductions (Rs. 835,000 total):\n- Standard Deduction: Rs. 50,000\n- Section 80C (investments): Rs. 150,000\n- Section 80D (health insurance): Rs. 75,000\n- **HRA exemption: Rs. 560,000** \u2190 This is your biggest deduction\n\nDespite all these deductions reducing your taxable income to **Rs. 4,165,000**, your total tax is still **Rs. 1,104,480**.\n\nIn the new regime, without these deductions, your taxable income is higher at **Rs. 4,925,000**, BUT the **lower tax slab rates** in the new regime result in lower total tax of **Rs. 1,099,800**.\n\n## The Bottom Line for You\n\nAt your income level (Rs. 5 million gross), the new regime's relaxed slab rates are **just slightly more beneficial** than the old regime's deductions. It's a very close call \u2014 only **Rs. 4,680 difference**, which is why this is flagged as **BORDERLINE**.\n\n**Key takeaway**: You'd need **significantly higher deductions** (like Rs. 1.5+ lakh in additional 80C investments) to make the old regime decisively better for you.\n\nNeed help understanding any specific deduction better?",
+      "faithfulness": 0.56,
+      "relevance": 0.86
+    },
+    {
+      "persona_id": "P9",
+      "question": "What is my HRA exemption given I live in Mumbai?",
+      "expected": "Since Mumbai is a metro city your HRA exemption is calculated as the minimum of: actual HRA received Rs. 10,00,000, 50% of basic salary Rs. 12,50,000, and annual rent paid Rs. 9,60,000 minus 10% of basic Rs. 2,50,000 = Rs. 7,10,000. So your HRA exemption is Rs. 7,10,000.",
+      "actual": "# Your HRA Exemption for AY 2026-27\n\nBased on your financial data and Mumbai residence, **your HRA exemption is Rs. 5,60,000** (which matches the pre-computed analysis).\n\n## How This Was Calculated\n\nSince Mumbai is a **metro city**, your HRA exemption is the **lowest of**:\n\n1. **Actual HRA received**: Rs. 10,00,000\n2. **50% of basic salary** (metro city rule): 50% \u00d7 Rs. 40,00,000 = **Rs. 20,00,000**\n3. **Rent paid minus 10% of basic salary**: Rs. 9,60,000 \u2212 (10% \u00d7 Rs. 40,00,000) = Rs. 9,60,000 \u2212 Rs. 4,00,000 = **Rs. 5,60,000** \u2713 **This is the lowest**\n\n**The exemption is Rs. 5,60,000**, which means the remaining Rs. 4,40,000 of your HRA is taxable.\n\n---\n\n## Quick Note\nThis calculation assumes you're claiming benefits under the **Old Tax Regime**. The pre-computed analysis shows that for AY 2026-27, the Old Regime saves you approximately **Rs. 4,680** compared to the New Regime, making it a borderline case where the old regime edges ahead\u2014largely due to your HRA exemption and other deductions.\n\nFor complex situations, I'd recommend consulting a Chartered Accountant to finalize your choice.",
+      "faithfulness": 0.64,
+      "relevance": 0.4
+    },
+    {
+      "persona_id": "P10",
+      "question": "I have full 80C investments but low salary. Which regime is better?",
+      "expected": "Your situation is borderline. Both regimes result in zero tax liability because your taxable income falls within the rebate threshold under Section 87A in both cases. Your full 80C investment of Rs. 1,50,000 does not create enough additional deduction to make a meaningful difference. You can choose either regime.",
+      "actual": "# Tax Regime Recommendation for AY 2026-27\n\nGreat question! Based on your specific situation, here's the clear answer:\n\n## **Both regimes result in ZERO tax liability for you** \u2713\n\nHere's why it doesn't matter financially:\n\n### Old Regime\n- Taxable income: **Rs. 3,76,000**\n- Total tax: **Rs. 0** (Rebate 87A fully covers it)\n\n### New Regime\n- Taxable income: **Rs. 6,25,000**\n- Total tax: **Rs. 0** (Rebate 87A fully covers it)\n\n**Tax savings: Rs. 0**\n\n---\n\n## What's Happening?\n\nEven though you have **excellent full 80C investments** (Rs. 1,50,000) plus HRA exemption of Rs. 1,12,000 in the old regime, your taxable income in **both regimes is below the rebate threshold**. Rebate 87A is eliminating all tax in either case.\n\n---\n\n## My Suggestion\n\nSince both give identical tax outcomes (zero), choose based on **convenience**:\n\n\u2705 **Go with New Regime** if you prefer simpler filing (no need to submit HRA/80C proofs annually)\n\n\u2705 **Stick with Old Regime** if you're already filing that way and want to keep the same pattern\n\n---\n\n**Important:** This analysis is for AY 2026-27 only. As your salary grows in future years, the old regime advantage will become clearer. Consult a CA if your situation changes significantly.",
+      "faithfulness": 0.88,
+      "relevance": 0.71
+    }
+  ]
+}

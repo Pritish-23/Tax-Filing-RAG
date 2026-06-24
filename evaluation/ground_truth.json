@@ -1,0 +1,144 @@
+{
+  "version": "1.0",
+  "description": "Ground truth Q&A pairs for RAGAs evaluation. Expected answers are hand-verified against tax_constants.yaml and persona definitions.",
+  "evaluation_pairs": [
+
+    {
+      "persona_id": "P1",
+      "persona_name": "Amit Sharma",
+      "assessment_year": "2026-27",
+      "question": "What is my net taxable income?",
+      "expected_answer": "Your net taxable income is Rs. 5,25,000. This is calculated as gross salary Rs. 6,00,000 minus standard deduction of Rs. 75,000.",
+      "expected_regime": "new",
+      "expected_tax_new": 0,
+      "expected_tax_old": 23400,
+      "deduction_category": null,
+      "tags": ["regime_comparison", "taxable_income"]
+    },
+    {
+      "persona_id": "P1",
+      "persona_name": "Amit Sharma",
+      "assessment_year": "2026-27",
+      "question": "Should I choose old or new tax regime?",
+      "expected_answer": "You should choose the new tax regime. Your taxable income under the new regime is Rs. 5,25,000 which is below Rs. 12,00,000, so you get full rebate under Section 87A and pay zero tax. Under the old regime you would pay Rs. 23,400.",
+      "expected_regime": "new",
+      "expected_tax_new": 0,
+      "expected_tax_old": 23400,
+      "deduction_category": "NEW_REGIME",
+      "tags": ["regime_comparison"]
+    },
+
+    {
+      "persona_id": "P2",
+      "persona_name": "Priya Nair",
+      "assessment_year": "2026-27",
+      "question": "Can I claim deduction for my PPF deposit?",
+      "expected_answer": "Yes, your PPF deposit of Rs. 50,000 is eligible for deduction under Section 80C. Combined with your LIC premium of Rs. 30,000, your total 80C investment is Rs. 80,000 which is within the Rs. 1,50,000 limit. You still have Rs. 70,000 of unused 80C capacity.",
+      "expected_regime": "new",
+      "expected_tax_new": 0,
+      "expected_tax_old": 56264,
+      "deduction_category": "80C",
+      "tags": ["80C", "PPF"]
+    },
+    {
+      "persona_id": "P2",
+      "persona_name": "Priya Nair",
+      "assessment_year": "2026-27",
+      "question": "What is my 80D deduction for health insurance?",
+      "expected_answer": "You can claim Rs. 12,000 under Section 80D for your self health insurance premium. The limit for self and family is Rs. 25,000 so you are well within the limit. You have not paid any parents health insurance premium so total 80D deduction is Rs. 12,000.",
+      "expected_regime": "new",
+      "expected_tax_new": 0,
+      "expected_tax_old": 56264,
+      "deduction_category": "80D",
+      "tags": ["80D", "self_premium"]
+    },
+
+    {
+      "persona_id": "P3",
+      "persona_name": "Rahul Mehta",
+      "assessment_year": "2026-27",
+      "question": "How is my HRA exemption calculated?",
+      "expected_answer": "Your HRA exemption is Rs. 2,64,000 calculated using Rule 2A as the minimum of: HRA received Rs. 2,50,000, 50% of basic salary Rs. 2,50,000 (metro city Mumbai), and rent paid Rs. 2,64,000 minus 10% of basic Rs. 50,000 = Rs. 2,14,000. Wait - the minimum of these three is Rs. 2,14,000.",
+      "expected_regime": "new",
+      "expected_tax_new": 0,
+      "expected_tax_old": 27144,
+      "deduction_category": "HRA",
+      "tags": ["HRA", "metro", "Rule2A"]
+    },
+    {
+      "persona_id": "P3",
+      "persona_name": "Rahul Mehta",
+      "assessment_year": "2026-27",
+      "question": "I have invested Rs 1.5 lakh in 80C. Can I claim the full amount?",
+      "expected_answer": "Yes, you can claim the full Rs. 1,50,000 under Section 80C. Your investments include LIC premium Rs. 50,000, PPF deposit Rs. 50,000, and ELSS investment Rs. 50,000 totalling Rs. 1,50,000 which exactly matches the maximum limit. There is no unused 80C capacity.",
+      "expected_regime": "new",
+      "expected_tax_new": 0,
+      "expected_tax_old": 27144,
+      "deduction_category": "80C",
+      "tags": ["80C", "full_limit"]
+    },
+
+    {
+      "persona_id": "P5",
+      "persona_name": "Vikram Reddy",
+      "assessment_year": "2026-27",
+      "question": "What is the 80D limit for my senior citizen parents?",
+      "expected_answer": "Since your parents are senior citizens, the 80D deduction limit for parents is Rs. 50,000 instead of the standard Rs. 25,000. You have paid Rs. 45,000 as parents health insurance premium which is within this limit. Your total 80D deduction is Rs. 67,000 (Rs. 22,000 for self plus Rs. 45,000 for parents).",
+      "expected_regime": "new",
+      "expected_tax_new": 97500,
+      "expected_tax_old": 110552,
+      "deduction_category": "80D",
+      "tags": ["80D", "senior_citizen", "parents"]
+    },
+    {
+      "persona_id": "P5",
+      "persona_name": "Vikram Reddy",
+      "assessment_year": "2026-27",
+      "question": "Which regime saves me more tax?",
+      "expected_answer": "The new tax regime saves you Rs. 13,052. Under the old regime your total tax is Rs. 1,10,552 and under the new regime it is Rs. 97,500. Even though you have significant deductions of Rs. 5,31,000 under the old regime, the new regime's lower slab rates result in lower overall tax.",
+      "expected_regime": "new",
+      "expected_tax_new": 97500,
+      "expected_tax_old": 110552,
+      "deduction_category": "NEW_REGIME",
+      "tags": ["regime_comparison", "savings"]
+    },
+
+    {
+      "persona_id": "P9",
+      "persona_name": "Arjun Kapoor",
+      "assessment_year": "2026-27",
+      "question": "Why does old regime save me more tax despite lower deductions in new regime?",
+      "expected_answer": "At your income level of Rs. 50,00,000 the surcharge rate matters significantly. Under the old regime with your deductions the effective surcharge is lower, whereas the new regime applies a 25% surcharge on your base tax at this income level. Combined with your significant deductions of over Rs. 5,00,000 under the old regime, the old regime saves you Rs. 42,120.",
+      "expected_regime": "old",
+      "expected_tax_new": 1099800,
+      "expected_tax_old": 1057680,
+      "deduction_category": "NEW_REGIME",
+      "tags": ["regime_comparison", "surcharge", "high_income"]
+    },
+    {
+      "persona_id": "P9",
+      "persona_name": "Arjun Kapoor",
+      "assessment_year": "2026-27",
+      "question": "What is my HRA exemption given I live in Mumbai?",
+      "expected_answer": "Since Mumbai is a metro city your HRA exemption is calculated as the minimum of: actual HRA received Rs. 10,00,000, 50% of basic salary Rs. 12,50,000, and annual rent paid Rs. 9,60,000 minus 10% of basic Rs. 2,50,000 = Rs. 7,10,000. So your HRA exemption is Rs. 7,10,000.",
+      "expected_regime": "old",
+      "expected_tax_new": 1099800,
+      "expected_tax_old": 1057680,
+      "deduction_category": "HRA",
+      "tags": ["HRA", "metro", "high_income"]
+    },
+
+    {
+      "persona_id": "P10",
+      "persona_name": "Deepa Krishnan",
+      "assessment_year": "2026-27",
+      "question": "I have full 80C investments but low salary. Which regime is better?",
+      "expected_answer": "Your situation is borderline. Both regimes result in zero tax liability because your taxable income falls within the rebate threshold under Section 87A in both cases. Your full 80C investment of Rs. 1,50,000 does not create enough additional deduction to make a meaningful difference. You can choose either regime.",
+      "expected_regime": "borderline",
+      "expected_tax_new": 0,
+      "expected_tax_old": 0,
+      "deduction_category": "NEW_REGIME",
+      "tags": ["regime_comparison", "borderline", "low_income"]
+    }
+  ]
+}
