@@ -10,11 +10,11 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
 from dotenv import load_dotenv
 load_dotenv()
 
-from extract_documents import extract_all
-from session_manager import store
-from deduction_engine import run_tax_analysis
-from rag_engine import answer_question
-from tax_calculator import compare_regimes
+from scripts.extract_documents import extract_all
+from scripts.session_manager import store
+from scripts.deduction_engine import run_tax_analysis
+from scripts.rag_engine import answer_question
+from scripts.tax_calculator import compare_regimes
 
 # ── config ────────────────────────────────────────────────────────────────────
 
@@ -117,8 +117,8 @@ def score_relevance(question: str, actual: str) -> float:
 # ── dimension 1: extraction accuracy ─────────────────────────────────────────
 
 def eval_extraction(personas: dict) -> list[ExtractionResult]:
-    from test_extraction import load_personas as load_all
-    from generate_form16 import compute_form16_values
+    from scripts.test_extraction import load_personas as load_all
+    from scripts.generate_form16 import compute_form16_values
 
     print("\n[1/3] Evaluating extraction accuracy...")
     results = []
