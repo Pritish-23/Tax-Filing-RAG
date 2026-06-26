@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 import anthropic
 import chromadb
 from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
+from langsmith_tracer import tracer
 
 load_dotenv()
 
@@ -123,29 +124,53 @@ def answer_question(
     session_collection,
     deduction_category: str = None,
 ) -> str:
-    """
-    Main entry point for Phase 5 Q&A.
-    1. Retrieves relevant tax law from persistent KB
-    2. Retrieves user context from ephemeral session collection
-    3. Builds prompt with pre-computed analysis context
-    4. Calls Claude for plain-language explanation
-    """
-    ay = analysis.deduction_detail.assessment_year
+    import time
+    ay             = analysis.deduction_detail.assessment_year
+    session_prefix = analysis.session_id[:8]
 
+    # Retrieval with tracing
+    t0             = time.time()
     tax_law_chunks = retrieve_tax_law(query, ay, deduction_category)
-    user_context   = retrieve_user_context(query, session_collection)
-    analysis_ctx   = build_llm_context(analysis)
+    retrieval_ms   = (time.time() - t0) * 1000
 
-    prompt = build_prompt(query, tax_law_chunks, user_context, analysis_ctx)
+    tracer.trace_retrieval(
+        query=query,
+        retrieved_count=len(tax_law_chunks),
+        deduction_category=deduction_category,
+        session_id_prefix=session_prefix,
+        latency_ms=retrieval_ms,
+    )
 
+    user_context = retrieve_user_context(query, session_collection)
+    analysis_ctx = build_llm_context(analysis)
+    prompt       = build_prompt(query, tax_law_chunks, user_context, analysis_ctx)
+
+    # LLM call with tracing
+    t0 = time.time()
     response = _anthropic_client.messages.create(
         model=CLAUDE_MODEL,
         max_tokens=1024,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": prompt}],
     )
+    llm_ms      = (time.time() - t0) * 1000
+    answer_text = response.content[0].text
+    token_count = response.usage.input_tokens + response.usage.output_tokens
 
-    return response.content[0].text
+    tracer.trace_llm_call(
+        run_name=f"tax_qa_{deduction_category or 'general'}",
+        inputs={
+            "query":  query,
+            "prompt": prompt,
+        },
+        outputs={"answer": answer_text},
+        latency_ms=llm_ms,
+        token_count=token_count,
+        session_id_prefix=session_prefix,
+        assessment_year=ay,
+    )
+
+    return answer_text
 
 
 # ── regime comparison explainer ───────────────────────────────────────────────
