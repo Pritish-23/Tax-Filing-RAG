@@ -2,10 +2,11 @@ import streamlit as st
 import requests
 import time
 from datetime import datetime
+import os
 
 # ── config ────────────────────────────────────────────────────────────────────
 
-API_BASE        = "http://localhost:8000/api"
+API_BASE = os.getenv("API_BASE", "http://localhost:8000/api")
 SESSION_TTL     = 30 * 60  # 30 minutes in seconds
 
 # ── page config ───────────────────────────────────────────────────────────────

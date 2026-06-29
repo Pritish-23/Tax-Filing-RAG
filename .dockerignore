@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+
+# Environment
+.env
+venv/
+env/
+
+# Git
+.git/
+.gitignore
+
+# Synthetic data (not needed in production)
+synthetic_data/
+
+# Evaluation (not needed in production)
+evaluation/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test scripts
+scripts/test_*.py
+scripts/generate_*.py
+scripts/fetch_sources.py
+scripts/retrieval_test.py
