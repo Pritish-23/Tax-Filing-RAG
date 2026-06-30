@@ -24,9 +24,7 @@ TOP_K_SESSION    = 1   # chunks from ephemeral session collection
 
 # ── clients ───────────────────────────────────────────────────────────────────
 
-_api_key = os.getenv("ANTHROPIC_API_KEY")
-print(f"DEBUG: ANTHROPIC_API_KEY present: {bool(_api_key)}, length: {len(_api_key) if _api_key else 0}")
-_anthropic_client = anthropic.Anthropic(api_key=_api_key)
+_anthropic_client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
 _embedding_fn = SentenceTransformerEmbeddingFunction(model_name=EMBED_MODEL)
 
