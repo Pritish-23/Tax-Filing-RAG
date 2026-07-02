@@ -39,3 +39,4 @@ pytest
 
 python-dotenv
 anthropic
+reportlab
