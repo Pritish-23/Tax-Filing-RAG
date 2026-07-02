@@ -10,11 +10,11 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
 from dotenv import load_dotenv
 load_dotenv()
 
-from scripts.extract_documents import extract_all
-from scripts.session_manager import store
-from scripts.deduction_engine import run_tax_analysis
-from scripts.rag_engine import answer_question
-from scripts.tax_calculator import compare_regimes
+from extract_documents import extract_all
+from session_manager import store
+from deduction_engine import run_tax_analysis
+from rag_engine import answer_question
+from tax_calculator import compare_regimes
 
 # ── config ────────────────────────────────────────────────────────────────────
 
