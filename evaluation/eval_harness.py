@@ -117,8 +117,8 @@ def score_relevance(question: str, actual: str) -> float:
 # ── dimension 1: extraction accuracy ─────────────────────────────────────────
 
 def eval_extraction(personas: dict) -> list[ExtractionResult]:
-    from scripts.test_extraction import load_personas as load_all
-    from scripts.generate_form16 import compute_form16_values
+    from test_extraction import load_personas as load_all
+    from generate_form16 import compute_form16_values
 
     print("\n[1/3] Evaluating extraction accuracy...")
     results = []
