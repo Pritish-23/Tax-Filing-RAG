@@ -2,7 +2,9 @@
 
 **A privacy-first RAG-based tax filing assistant for Indian salaried individuals**, built with an ephemeral, zero-persistence architecture aligned with India's DPDP Act.
 
-🔗 **Live Demo:** https://tax-filing-rag-streamlit-production.up.railway.app
+🔗 **Live Demo:** [tax-filing-rag-streamlit-production.up.railway.app](https://tax-filing-rag-streamlit-production.up.railway.app)
+
+![Demo](screenshots/ezgif-3ffdd1c9fdf23024.gif)
 
 ---
 
