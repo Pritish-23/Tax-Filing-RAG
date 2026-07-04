@@ -110,28 +110,49 @@ Salaried individuals, resident status, old and new tax regimes, **AY 2025-26 and
 # Project Structure
 
 ```text
-tax_assistant/
-├── data/                    # tax_constants.yaml (versioned by AY), scope.md
-├── raw_sources/             # Public tax law source documents + manifest
-├── knowledge_base/          # Persistent ChromaDB (public tax law only)
-├── synthetic_data/          # 10 synthetic personas, Form 16 PDFs, bank CSVs
-├── scripts/
-│   ├── extract_documents.py  # PDF/CSV → structured Pydantic models
-│   ├── session_manager.py    # Ephemeral privacy layer
-│   ├── tax_calculator.py     # Deterministic regime math
-│   ├── deduction_engine.py   # Deduction matching + capping
-│   ├── rag_engine.py         # Dual retrieval + Claude Q&A
-│   └── langsmith_tracer.py   # Redaction middleware
-├── evaluation/
-│   ├── ground_truth.json     # Hand-verified Q&A pairs
-│   └── eval_harness.py       # 3-dimension eval pipeline
-├── app/
-│   ├── main.py               # FastAPI app
-│   ├── routers/              # upload, analysis, chat, session endpoints
-│   └── streamlit_app.py      # Frontend
+Tax-Filing-RAG/
+├── .github/
+├── app/                          # FastAPI + Streamlit (unchanged)
+│   ├── routers/
+│   ├── main.py
+│   └── streamlit_app.py
+├── core/                         # ← rename from scripts/
+│   ├── extraction/               # document parsing
+│   │   ├── extract_documents.py
+│   │   └── schemas.py
+│   ├── reasoning/                # tax math + RAG
+│   │   ├── tax_calculator.py
+│   │   ├── deduction_engine.py
+│   │   └── rag_engine.py
+│   ├── privacy/                  # session management
+│   │   ├── session_manager.py
+│   │   └── langsmith_tracer.py
+│   └── knowledge_base/           # ingestion pipeline
+│       ├── chunk_sources.py
+│       ├── fetch_sources.py
+│       └── ingest.py
+├── data/                         # constants and config (unchanged)
+├── evaluation/                   # eval harness (unchanged)
+├── knowledge_base/               # ChromaDB persistent store (unchanged)
+├── raw_sources/                  # source documents (unchanged)
+├── synthetic_data/               # test fixtures (unchanged)
+├── tests/                        # ← move test_*.py here
+│   ├── test_extraction.py
+│   ├── test_session.py
+│   ├── test_rag_engine.py
+│   └── test_tax_calculator.py
+├── pipeline/                     # ← one-time data scripts
+│   ├── generate_form16.py
+│   ├── generate_bank_statements.py
+│   └── retrieval_test.py
+├── docs/
+│   └── demo.gif
 ├── Dockerfile.api
 ├── Dockerfile.streamlit
-└── docker-compose.yml
+├── docker-compose.yml
+├── requirements.txt
+├── DECISIONS.md
+└── README.md
 ```
 
 ---
