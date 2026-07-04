@@ -166,12 +166,12 @@ Runs extraction accuracy, regime recommendation accuracy, and RAG quality checks
 
 ---
 
-# What I'd Build Next
+## What I'd Build Next
 
 - Section 80CCD(1B) (NPS) — most requested deduction outside current scope
 - Marginal relief calculation for surcharge (currently uses flat rate)
-- GitHub Actions CI running the eval suite on every PR
 - Multi-turn conversation memory within a session
+- Rate limiting per session to prevent API cost abuse
 
 ---
 
