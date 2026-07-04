@@ -135,6 +135,7 @@ Tax-Filing-RAG/
 ├── evaluation/                   # eval harness (unchanged)
 ├── knowledge_base/               # ChromaDB persistent store (unchanged)
 ├── raw_sources/                  # source documents (unchanged)
+├── screenshots/
 ├── synthetic_data/               # test fixtures (unchanged)
 ├── tests/                        # ← move test_*.py here
 │   ├── test_extraction.py
