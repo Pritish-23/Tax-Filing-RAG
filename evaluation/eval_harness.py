@@ -5,16 +5,17 @@ from pathlib import Path
 from datetime import datetime
 from dataclasses import dataclass, asdict
 
-sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from core.extraction.extract_documents import extract_all
+from core.privacy.session_manager import store
+from core.reasoning.deduction_engine import run_tax_analysis
+from core.reasoning.rag_engine import answer_question
+from core.reasoning.tax_calculator import compare_regimes
+from pipeline.generate_form16 import compute_form16_values
 
 from dotenv import load_dotenv
 load_dotenv()
-
-from extract_documents import extract_all
-from session_manager import store
-from deduction_engine import run_tax_analysis
-from rag_engine import answer_question
-from tax_calculator import compare_regimes
 
 # ── config ────────────────────────────────────────────────────────────────────
 
@@ -117,7 +118,6 @@ def score_relevance(question: str, actual: str) -> float:
 # ── dimension 1: extraction accuracy ─────────────────────────────────────────
 
 def eval_extraction(personas: dict) -> list[ExtractionResult]:
-    from generate_form16 import compute_form16_values
     
     print("\n[1/3] Evaluating extraction accuracy...")
     results = []

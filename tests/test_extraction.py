@@ -2,10 +2,10 @@ import sys
 import yaml
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from extract_documents import extract_all
-from generate_form16 import compute_form16_values
+from core.extraction.extract_documents import extract_all
+from pipeline.generate_form16 import compute_form16_values
 
 # ── config ────────────────────────────────────────────────────────────────────
 

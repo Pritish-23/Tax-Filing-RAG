@@ -1,0 +1,256 @@
+{
+  "summary": {
+    "run_timestamp": "2026-07-04T13:02:12.084573",
+    "extraction_accuracy": 1.0,
+    "regime_accuracy": 1.0,
+    "avg_faithfulness": 0.861,
+    "avg_relevance": 0.811,
+    "overall_score": 0.918,
+    "total_personas": 10,
+    "total_rag_pairs": 11
+  },
+  "extraction": [
+    {
+      "persona_id": "P1",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P2",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P3",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P4",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P5",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P6",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P7",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P8",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P9",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    },
+    {
+      "persona_id": "P10",
+      "passed": 13,
+      "total": 13,
+      "accuracy": 1.0
+    }
+  ],
+  "regime": [
+    {
+      "persona_id": "P1",
+      "expected": "new",
+      "got": "new",
+      "matched": true,
+      "old_tax": 23400,
+      "new_tax": 0,
+      "savings": 23400
+    },
+    {
+      "persona_id": "P2",
+      "expected": "new",
+      "got": "new",
+      "matched": true,
+      "old_tax": 56264,
+      "new_tax": 0,
+      "savings": 56264
+    },
+    {
+      "persona_id": "P3",
+      "expected": "new",
+      "got": "new",
+      "matched": true,
+      "old_tax": 27144,
+      "new_tax": 0,
+      "savings": 27144
+    },
+    {
+      "persona_id": "P4",
+      "expected": "new",
+      "got": "new",
+      "matched": true,
+      "old_tax": 51272,
+      "new_tax": 0,
+      "savings": 51272
+    },
+    {
+      "persona_id": "P5",
+      "expected": "new",
+      "got": "new",
+      "matched": true,
+      "old_tax": 103064,
+      "new_tax": 97500,
+      "savings": 5564
+    },
+    {
+      "persona_id": "P6",
+      "expected": "new",
+      "got": "new",
+      "matched": true,
+      "old_tax": 290160,
+      "new_tax": 150800,
+      "savings": 139360
+    },
+    {
+      "persona_id": "P7",
+      "expected": "new",
+      "got": "new",
+      "matched": true,
+      "old_tax": 351000,
+      "new_tax": 319800,
+      "savings": 31200
+    },
+    {
+      "persona_id": "P8",
+      "expected": "new",
+      "got": "new",
+      "matched": true,
+      "old_tax": 85800,
+      "new_tax": 0,
+      "savings": 85800
+    },
+    {
+      "persona_id": "P9",
+      "expected": "old",
+      "got": "old",
+      "matched": true,
+      "old_tax": 1057680,
+      "new_tax": 1099800,
+      "savings": 42120
+    },
+    {
+      "persona_id": "P10",
+      "expected": "borderline",
+      "got": "borderline",
+      "matched": true,
+      "old_tax": 0,
+      "new_tax": 0,
+      "savings": 0
+    }
+  ],
+  "rag": [
+    {
+      "persona_id": "P1",
+      "question": "What is my net taxable income?",
+      "expected": "Your net taxable income is Rs. 5,25,000. This is calculated as gross salary Rs. 6,00,000 minus standard deduction of Rs. 75,000.",
+      "actual": "# Your Net Taxable Income\n\nBased on your financial data for **Assessment Year 2026-27**, your **net taxable income is Rs. 525,000** under the **new tax regime** (which is recommended for you).\n\nHere's how this breaks down:\n\n| Item | Amount |\n|------|--------|\n| **Gross Salary** | Rs. 600,000 |\n| Less: Standard Deduction (New Regime) | Rs. 75,000 |\n| **Net Taxable Income** | **Rs. 525,000** |\n\n## Why This Matters for You\n\nSince you're opting for the **new tax regime**:\n- Your taxable income of Rs. 525,000 falls within the **tax-free bracket up to Rs. 12.75 lakh**\n- **Your total tax liability is Rs. 0** after applying the rebate of Rs. 6,250\n- This saves you **Rs. 23,400** compared to the old regime\n\n## Important Notes\n\n- You're **not claiming any HRA exemption**, so the full Rs. 120,000 HRA received remains in your income\n- You have **unused Section 80C capacity of Rs. 150,000** \u2014 but the new regime doesn't allow 80C deductions anyway\n- Your TDS deducted (Rs. 8,000) will be refunded to you\n\n**Recommendation:** Consult a CA if your situation changes during the financial year (e.g., if you make investments or claim HRA exemption).",
+      "faithfulness": 1.0,
+      "relevance": 0.67
+    },
+    {
+      "persona_id": "P1",
+      "question": "Should I choose old or new tax regime?",
+      "expected": "You should choose the new tax regime. Your taxable income under the new regime is Rs. 5,25,000 which is below Rs. 12,00,000, so you get full rebate under Section 87A and pay zero tax. Under the old regime you would pay Rs. 23,400.",
+      "actual": "# Tax Regime Recommendation for AY 2026-27\n\nBased on your financial situation, **you should choose the NEW tax regime** and save **Rs. 23,400** in taxes.\n\n## Here's Why:\n\n### Your Current Deduction Profile\nYou're not claiming any major deductions:\n- \u274c No HRA exemption (rent paid = Rs. 0)\n- \u274c No Section 80C investments (LIC, PPF, ELSS = Rs. 0)\n- \u274c No Section 80D health insurance premiums = Rs. 0\n\nWith minimal deductions available to you, the Old Regime offers very little tax benefit.\n\n### Tax Comparison at a Glance\n\n| Aspect | Old Regime | New Regime |\n|--------|-----------|-----------|\n| **Taxable Income** | Rs. 550,000 | Rs. 525,000 |\n| **Total Tax** | Rs. 23,400 | Rs. 0 |\n| **Your Tax Savings** | \u2014 | **Rs. 23,400** \u2705 |\n\nThe New Regime's lower tax rates and the Rebate under Section 87A (which covers your entire tax liability up to Rs. 6,250) result in **zero tax** for you.\n\n## One Important Note:\nIf you plan to start investing in Section 80C or 80D (insurance, PPF, ELSS, etc.) or paying rent in future years, you may want to reconsider. But **for FY 2025-26, the New Regime is clearly better for your situation.**\n\n---\n*This is not professional tax advice. For complex situations, please consult a Chartered Accountant.*",
+      "faithfulness": 0.89,
+      "relevance": 1.0
+    },
+    {
+      "persona_id": "P2",
+      "question": "Can I claim deduction for my PPF deposit?",
+      "expected": "Yes, your PPF deposit of Rs. 50,000 is eligible for deduction under Section 80C. Combined with your LIC premium of Rs. 30,000, your total 80C investment is Rs. 80,000 which is within the Rs. 1,50,000 limit. You still have Rs. 70,000 of unused 80C capacity.",
+      "actual": "# PPF Deduction for Your Tax Filing (AY 2026-27)\n\nYes, you **can claim a deduction for your PPF deposit of Rs. 50,000** under Section 80C!\n\n## Your Situation:\n\nBased on your financial data:\n- **PPF Deposit Made:** Rs. 50,000 \u2713\n- **Claimed in Old Regime:** Yes, included in your Rs. 80,000 total 80C deduction\n- **Status:** Valid and eligible\n\n## Key Points:\n\n\u2705 **You're within limits:** Your total 80C deduction is Rs. 80,000 (PPF Rs. 50,000 + LIC Premium Rs. 30,000), which is well below the Rs. 1,50,000 annual cap.\n\n\u2705 **You have unused capacity:** You could invest an additional **Rs. 70,000** in Section 80C instruments before 31st March 2026 if needed.\n\n## Important Reminder:\n\nEven though your PPF qualifies for deduction, **the tax analysis shows you should file under the New Regime**, which saves you Rs. 56,264 in total tax. In the New Regime, you won't claim these deductions, but you'll pay significantly less tax overall.\n\n---\n\n**Make sure you have your PPF deposit slip/bank statement ready for your ITR filing.** \n\nFor any complex situations or if you have other deductions to discuss, I recommend consulting with a Chartered Accountant.",
+      "faithfulness": 0.92,
+      "relevance": 1.0
+    },
+    {
+      "persona_id": "P2",
+      "question": "What is my 80D deduction for health insurance?",
+      "expected": "You can claim Rs. 12,000 under Section 80D for your self health insurance premium. The limit for self and family is Rs. 25,000 so you are well within the limit. You have not paid any parents health insurance premium so total 80D deduction is Rs. 12,000.",
+      "actual": "# Your Section 80D Deduction for AY 2026-27\n\nBased on your financial data, **your eligible Section 80D deduction is Rs. 12,000**.\n\n## Breakdown:\n\n| Item | Amount |\n|------|--------|\n| Self health insurance premium | Rs. 12,000 |\n| Parents health insurance premium | Rs. 0 |\n| **Total 80D Claimed** | **Rs. 12,000** |\n| Available limit (self + family) | Rs. 25,000 |\n| **Unused 80D capacity** | **Rs. 13,000** |\n\n## Key Points:\n\n\u2705 **Your self health insurance premium of Rs. 12,000 is fully eligible** for deduction under Section 80D.\n\n\u26a0\ufe0f **You have Rs. 13,000 remaining capacity** \u2014 If your parents are senior citizens (60+) and you pay their health insurance premiums, you could claim up to an additional Rs. 25,000 for them (subject to a separate limit).\n\n\ud83d\udca1 **Remember:** Section 80D deduction is **separate from your Section 80C limit** of Rs. 1.5 lakh, so these benefits don't overlap.\n\n---\n\n**A note on your situation:** Given the tax analysis, the **New Regime is significantly better for you** (saving Rs. 56,264), which doesn't allow you to use Section 80D anyway. But if circumstances change, you'll know this deduction is available.\n\n**Recommendation:** Consult a Chartered Accountant to finalize your tax return filing decision.",
+      "faithfulness": 1.0,
+      "relevance": 0.75
+    },
+    {
+      "persona_id": "P3",
+      "question": "How is my HRA exemption calculated?",
+      "expected": "Your HRA exemption is Rs. 2,64,000 calculated using Rule 2A as the minimum of: HRA received Rs. 2,50,000, 50% of basic salary Rs. 2,50,000 (metro city Mumbai), and rent paid Rs. 2,64,000 minus 10% of basic Rs. 50,000 = Rs. 2,14,000. Wait - the minimum of these three is Rs. 2,14,000.",
+      "actual": "# Your HRA Exemption Calculation (AY 2026-27)\n\nGreat question! Let me break down exactly how your HRA exemption of **Rs. 189,000** was calculated.\n\n## The Three-Part Test\n\nHRA exemption is the **lowest of these three amounts**:\n\n1. **Actual HRA received:** Rs. 250,000\n2. **50% of Basic Salary** (Metro city rule): Rs. 375,000 (50% of Rs. 750,000)\n3. **Rent paid minus 10% of Basic Salary:** Rs. 189,000\n   - Rent paid: Rs. 264,000\n   - Minus 10% of basic (Rs. 75,000): \n   - = Rs. 189,000\n\n## Your Result\n\nSince **Rs. 189,000 is the lowest** of the three, that's your HRA exemption amount.\n\nThis means:\n- **HRA Exemption (tax-free):** Rs. 189,000\n- **HRA Taxable (included in income):** Rs. 61,000 (Rs. 250,000 - Rs. 189,000)\n\n## Why This Matters\n\nSince you live in **Delhi** (a metro city), you qualified for the 50% basic salary exemption limit. However, your rent minus 10% of salary turned out to be the restricting factor, so that's what limited your exemption.\n\n---\n\n**Note:** This calculation applies only under the **Old Tax Regime**. Under the New Regime, HRA exemption doesn't apply at all. As per the pre-computed analysis, the New Regime is more beneficial for you this year!\n\nFor any clarifications on your specific situation, I'd recommend consulting your CA. \ud83d\ude0a",
+      "faithfulness": 0.79,
+      "relevance": 1.0
+    },
+    {
+      "persona_id": "P3",
+      "question": "I have invested Rs 1.5 lakh in 80C. Can I claim the full amount?",
+      "expected": "Yes, you can claim the full Rs. 1,50,000 under Section 80C. Your investments include LIC premium Rs. 50,000, PPF deposit Rs. 50,000, and ELSS investment Rs. 50,000 totalling Rs. 1,50,000 which exactly matches the maximum limit. There is no unused 80C capacity.",
+      "actual": "# Section 80C Deduction - Your Situation (AY 2026-27)\n\nGood news! **Yes, you can claim the full Rs. 1.5 lakh under Section 80C**, and you already are!\n\n## Your Current Position\n\nBased on your bank statements, you've invested:\n- **LIC Premium:** Rs. 50,000\n- **PPF Deposit:** Rs. 50,000\n- **ELSS Investment:** Rs. 50,000\n- **Total:** Rs. 1.5 lakh\n\nYour employer has already claimed **Rs. 1.5 lakh** in Section 80C on your Form 16, which is the **maximum limit allowed** for FY 2025-26. So you're utilizing your full deduction capacity.\n\n## Important Note About Your Tax Filing\n\nHowever, there's something crucial: **The pre-computed analysis shows filing in the New Regime is significantly better for you**, saving Rs. 32,344 in taxes compared to the Old Regime.\n\nIn the **New Regime**, you cannot claim Section 80C deductions at all. So while you *can* claim the full Rs. 1.5 lakh under Section 80C, it's actually better tax-wise to file under the New Regime where these deductions don't apply.\n\n---\n\n**My recommendation:** Consult a CA before filing your ITR for AY 2026-27 to confirm which regime is optimal for your overall financial situation, as this involves a strategic trade-off.",
+      "faithfulness": 0.9,
+      "relevance": 0.67
+    },
+    {
+      "persona_id": "P5",
+      "question": "What is the 80D limit for my senior citizen parents?",
+      "expected": "Since your parents are senior citizens, the 80D deduction limit for parents is Rs. 50,000 instead of the standard Rs. 25,000. You have paid Rs. 45,000 as parents health insurance premium which is within this limit. Your total 80D deduction is Rs. 67,000 (Rs. 22,000 for self plus Rs. 45,000 for parents).",
+      "actual": "# Section 80D Limit for Senior Citizen Parents\n\nBased on the tax law context and your specific situation (Assessment Year 2026-27):\n\n**For your senior citizen parents, the Section 80D deduction limit is Rs. 50,000.**\n\nSince your parents are senior citizens, they qualify for the higher limit of Rs. 50,000 for health insurance premiums paid on their behalf.\n\n## How This Applies to Your Tax Return:\n\nLooking at your current claims:\n- **Parents health insurance premium paid: Rs. 45,000** \u2713\n- **80D limit for senior citizen parents: Rs. 50,000**\n\nGood news! Your parents' premium of Rs. 45,000 is **well within the limit**, so you can claim the full Rs. 45,000 as a deduction under Section 80D.\n\n## Your Total 80D Claim:\n- Self/Spouse/Children: Rs. 22,000 (limit: Rs. 25,000)\n- Senior citizen parents: Rs. 45,000 (limit: Rs. 50,000)\n- **Total 80D eligible: Rs. 67,000** \u2713\n\nThis matches what's already reflected in your pre-computed tax analysis.\n\n---\n\n**Note:** I'm not a registered tax advisor. For any complex situations or if you have questions about specific policy eligibility, please consult your CA.",
+      "faithfulness": 1.0,
+      "relevance": 1.0
+    },
+    {
+      "persona_id": "P5",
+      "question": "Which regime saves me more tax?",
+      "expected": "The new tax regime saves you Rs. 13,052. Under the old regime your total tax is Rs. 1,10,552 and under the new regime it is Rs. 97,500. Even though you have significant deductions of Rs. 5,31,000 under the old regime, the new regime's lower slab rates result in lower overall tax.",
+      "actual": "# Tax Regime Comparison for AY 2026-27\n\nBased on your financial data, **the New Tax Regime saves you more tax**.\n\n## Quick Summary\n\n| Metric | Old Regime | New Regime |\n|--------|-----------|-----------|\n| **Total Tax Payable** | Rs. 110,552 | Rs. 97,500 |\n| **Effective Tax Rate** | 7.37% | 6.5% |\n| **Tax Savings with New Regime** | \u2014 | **Rs. 13,052** |\n\n## Why New Regime Wins for You\n\nEven though you have **substantial deductions totaling Rs. 5,31,000** (Standard Deduction + 80C + 80D + HRA exemption), the New Regime's relaxed tax slab rates are more beneficial in your case. \n\nYour deductions bring your taxable income down to Rs. 9,69,000 under the old regime, but the new regime's lower tax rates result in less total tax despite a higher taxable income of Rs. 14,25,000.\n\n## Your Deductions (Old Regime)\n\n- Standard Deduction: Rs. 50,000\n- Section 80C: Rs. 1,50,000 (LIC + PPF + ELSS fully utilized)\n- Section 80D: Rs. 67,000 (health insurance \u2014 within limits)\n- HRA Exemption: Rs. 2,64,000 (metro city benefit applied)\n\n**Note:** While these are good deductions, they're not high enough to make the old regime more beneficial for your income level.\n\n---\n\n**Important:** This analysis is for informational purposes only. Please consult a Chartered Accountant for any complex tax planning or if your situation changes.",
+      "faithfulness": 1.0,
+      "relevance": 0.75
+    },
+    {
+      "persona_id": "P9",
+      "question": "Why does old regime save me more tax despite lower deductions in new regime?",
+      "expected": "At your income level of Rs. 50,00,000 the surcharge rate matters significantly. Under the old regime with your deductions the effective surcharge is lower, whereas the new regime applies a 25% surcharge on your base tax at this income level. Combined with your significant deductions of over Rs. 5,00,000 under the old regime, the old regime saves you Rs. 42,120.",
+      "actual": "# Why Old Regime Saves You More Tax (Assessment Year 2026-27)\n\nGreat question! The answer lies in **how deductions reduce your taxable income and affect the progressive tax slab rates**.\n\n## Here's what's happening in your case:\n\n**Old Regime Advantage:**\n- Your total deductions = **Rs. 835,000** (Standard Deduction + 80C + 80D + HRA exemption)\n- This reduces your taxable income from Rs. 5,000,000 to **Rs. 4,165,000**\n- You pay tax: **Rs. 1,104,480**\n\n**New Regime:**\n- No deductions allowed (except Standard Deduction embedded in slab design)\n- Your taxable income remains **Rs. 4,925,000**\n- You pay tax: **Rs. 1,099,800**\n\n## The Key Insight:\n\nThe old regime saves you **Rs. 4,680** because:\n\n1. **Your deductions are substantial** \u2014 Rs. 835,000 is meaningful, especially your **HRA exemption of Rs. 560,000** (60% of rent paid, as per metro city rules)\n2. **Progressive tax slabs work in your favor** \u2014 By dropping your income from Rs. 4.9L to Rs. 4.16L, you avoid higher tax brackets on that portion\n3. **The new regime's lower rates aren't enough** to overcome the tax benefit of your deductions in your income bracket\n\n## Why \"Borderline\"?\n\nThe margin is **only Rs. 4,680** (0.09% difference). You're right on the edge \u2014 this is why it's called **borderline**. A small change in deductions or income could flip the verdict to the new regime being better.\n\n---\n\n**My recommendation:** Since the difference is marginal, consult a CA before filing. They can also review if you have any additional deductions (home loan interest, donations, etc.) that could strengthen the old regime case further.",
+      "faithfulness": 0.67,
+      "relevance": 0.71
+    },
+    {
+      "persona_id": "P9",
+      "question": "What is my HRA exemption given I live in Mumbai?",
+      "expected": "Since Mumbai is a metro city your HRA exemption is calculated as the minimum of: actual HRA received Rs. 10,00,000, 50% of basic salary Rs. 12,50,000, and annual rent paid Rs. 9,60,000 minus 10% of basic Rs. 2,50,000 = Rs. 7,10,000. So your HRA exemption is Rs. 7,10,000.",
+      "actual": "# Your HRA Exemption for AY 2026-27\n\nBased on your financial data and the fact that you live in **Mumbai** (a metro city), your **HRA exemption is Rs. 560,000**.\n\n## How This Was Calculated\n\nFor metro cities like Mumbai, HRA exemption is the **lowest of**:\n\n1. **Actual HRA received**: Rs. 10,00,000\n2. **50% of basic salary** (metro cities rule): Rs. 20,00,000 (50% of Rs. 40,00,000)\n3. **Rent paid minus 10% of basic salary**: Rs. 6,00,000 (Rs. 9,60,000 - Rs. 4,00,000)\n\nThe lowest figure is **Rs. 6,00,000**, but the pre-computed analysis shows your eligible exemption as **Rs. 560,000** \u2014 this likely reflects the actual deduction allowed based on your specific rent and salary details.\n\n## What This Means for Your Taxes\n\n- **HRA Exemption (non-taxable)**: Rs. 560,000\n- **HRA Taxable**: Rs. 440,000 (Rs. 10,00,000 - Rs. 560,000)\n\nThis taxable HRA of Rs. 440,000 is included in your overall taxable income.\n\n---\n\n**Note**: This answer applies to **Assessment Year 2026-27** under the Old Tax Regime (which saves you Rs. 4,680 compared to the New Regime in your case). If your circumstances change, consult a CA for updated advice.",
+      "faithfulness": 0.55,
+      "relevance": 0.8
+    },
+    {
+      "persona_id": "P10",
+      "question": "I have full 80C investments but low salary. Which regime is better?",
+      "expected": "Your situation is borderline. Both regimes result in zero tax liability because your taxable income falls within the rebate threshold under Section 87A in both cases. Your full 80C investment of Rs. 1,50,000 does not create enough additional deduction to make a meaningful difference. You can choose either regime.",
+      "actual": "# Tax Regime Recommendation for AY 2026-27\n\nGreat question! Here's the straightforward answer for your situation:\n\n## **Both Regimes Result in Zero Tax** \n\nGiven your salary of Rs. 7 lakhs and the deductions you've claimed, **you owe no income tax under either regime**. So technically, there's no tax savings difference\u2014both give you the same result: **Rs. 0 tax liability**.\n\n## Why This Happens\n\n**Old Regime:**\n- Your gross salary minus deductions (standard deduction + 80C + 80D + HRA exemption) brings your taxable income down to Rs. 3,76,000\n- Even at that reduced level, you fall within the rebate 87A limit, resulting in zero tax\n\n**New Regime:**\n- Without the deductions, your taxable income is Rs. 6,25,000\n- But the new regime's relaxed tax slabs and rebate 87A also bring your tax to zero\n\n## My Recommendation: **Go with Old Regime**\n\nEven though both show zero tax now, choose the **Old Regime** because:\n\n1. \u2705 You're **fully utilizing** your Rs. 1.5 lakh 80C investment capacity (LIC, PPF, ELSS\u2014excellent choices!)\n2. \u2705 You have legitimate deductions (HRA exemption of Rs. 1,12,000 is significant)\n3. \u2705 You've claimed 80D for health insurance\n4. \u2705 If your salary increases in future years, the Old Regime deductions will protect you from higher taxes\n\n## Important Notes\n\n- Your TDS of Rs. 18,000 will be fully refunded since your tax liability is zero\n- Ensure your HRA exemption claim of Rs. 1,33,000 in your Form 16 matches our calculation (we computed Rs. 1,12,000 as eligible)\u2014clarify this with your HR/CA\n\n**Always consult a CA to validate your HRA exemption calculation and ensure compliance with your employer's records.**",
+      "faithfulness": 0.75,
+      "relevance": 0.57
+    }
+  ]
+}

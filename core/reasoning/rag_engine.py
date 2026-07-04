@@ -5,13 +5,15 @@ from dotenv import load_dotenv
 import anthropic
 import chromadb
 from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
-from langsmith_tracer import tracer
 
 load_dotenv()
 
-sys.path.insert(0, str(Path(__file__).parent))
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from deduction_engine import FullTaxAnalysis, build_llm_context
+from core.reasoning.deduction_engine import FullTaxAnalysis, build_llm_context
+from core.privacy.langsmith_tracer import tracer
 
 # ── config ────────────────────────────────────────────────────────────────────
 

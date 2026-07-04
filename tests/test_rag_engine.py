@@ -1,14 +1,14 @@
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from core.extraction.extract_documents import extract_all
+from core.privacy.session_manager import store
+from core.reasoning.deduction_engine import run_tax_analysis
+from core.reasoning.rag_engine import answer_question, explain_regime_comparison
 
 from dotenv import load_dotenv
 load_dotenv()
-
-from extract_documents import extract_all
-from session_manager import store
-from deduction_engine import run_tax_analysis
-from rag_engine import answer_question, explain_regime_comparison
 
 # Use P5 — has HRA, full 80C, senior citizen parents
 form16_path = Path("synthetic_data/form16/form16_P5_Vikram_Reddy.pdf")

@@ -5,8 +5,11 @@ import io
 from pathlib import Path
 from datetime import datetime
 from typing import Union, BinaryIO
+import sys
 
-from schemas import (
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+
+from core.extraction.schemas import (
     Form16Data, BankTransaction, InvestmentSummary,
     ExtractedFinancials, TransactionCategory, InvestmentTag
 )

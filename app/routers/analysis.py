@@ -1,12 +1,12 @@
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).parent.parent.parent / "scripts"))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+
+from core.privacy.session_manager import store
+from core.reasoning.rag_engine import explain_regime_comparison
 
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-
-from scripts.session_manager import store
-from scripts.rag_engine import explain_regime_comparison
 
 router = APIRouter()
 

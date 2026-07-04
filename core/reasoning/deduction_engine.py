@@ -2,13 +2,15 @@ import yaml
 from pathlib import Path
 from dataclasses import dataclass
 from typing import Optional
+import sys
 
-from schemas import ExtractedFinancials
-from tax_calculator import (
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+
+from core.extraction.schemas import ExtractedFinancials
+from core.reasoning.tax_calculator import (
     load_constants, build_deductions,
     compare_regimes, DeductionSummary, RegimeComparison
 )
-
 # ── config ────────────────────────────────────────────────────────────────────
 
 CONSTANTS_PATH = Path("data/tax_constants.yaml")

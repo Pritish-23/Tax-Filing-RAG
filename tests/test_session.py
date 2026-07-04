@@ -1,9 +1,10 @@
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from extract_documents import extract_all
-from session_manager import store
+from core.extraction.extract_documents import extract_all
+from core.privacy.session_manager import store
+
 import time
 
 # Use P3 as test persona — has HRA, full 80C, 80D

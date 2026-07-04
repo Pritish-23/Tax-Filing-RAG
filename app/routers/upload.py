@@ -1,14 +1,13 @@
 import sys
-import io
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).parent.parent.parent / "scripts"))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+
+from core.extraction.extract_documents import extract_all
+from core.privacy.session_manager import store
+from core.reasoning.deduction_engine import run_tax_analysis
 
 from fastapi import APIRouter, UploadFile, File, HTTPException, Form
 from pydantic import BaseModel
-
-from scripts.extract_documents import extract_all
-from scripts.session_manager import store
-from scripts.deduction_engine import run_tax_analysis
 
 router = APIRouter()
 
